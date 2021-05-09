@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container homeDiv" id="rooms-container">
+    <div class="bg-dark w-75 p-3">
+        {% for room in rooms %}
+        <div class="conatiner text-light mt-4 p-4 row">
+            <span class="col">{{ room.id.capitalize() }}</span>
+            {% if room.population == 1 %}
+            <span class="col">{{ room.population }} User Connected</span>
+            {% else %}
+            <span class="col">{{ room.population }} Users Connected</span>
+            {% endif %}
+            {% if room.is_private == True %}
+            <form action="/room/{{ room.id }}/password">
+                <button class="joinBtn btn btn-danger">Join</button>
+            </form>
+            {% else %}
+            <form action="/room/{{ room.id }}">
+                <button class="joinBtn btn btn-danger">Join</button>
+            </form>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<form action="/room/new" id="room-form">
+    <button class="btn btn-success w-50">Create A Room</button>
+</form>
+{% endblock %}

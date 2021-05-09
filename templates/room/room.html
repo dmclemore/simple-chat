@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container" id="chat-container">
+    <input type="hidden" id="roomId" value="{{ room.id }}">
+    <div class="container text-center text-light mx-1 mt-4">
+        <div class="roomTitle">
+            <h2>{{ room.id.capitalize() }}</h2>
+        </div>
+        <hr>
+        <div class="container mx-0 text-left" id="chat-all-messages"></div>
+        <form id="chat-form" autocomplete="off">
+            <div class="input-group">
+                <input type="hidden" id="chat-user" value="{{ user.username }}">
+                <input type="text" class="form-control" placeholder="Message" id="chat-message">
+                <div class="input-group-append">
+                    <button class="btn btn-danger" type="button" id="chat-submit">Send</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+<script src="/static/room.js"></script>
+{% endblock %}

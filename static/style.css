@@ -1,0 +1,39 @@
+body {
+    background-color: #292929;
+    overflow-x: hidden;
+}
+
+.homeDiv {
+    height: 75vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#chat-container {
+    width: 100%;
+    overflow: auto;
+}
+
+#chat-all-messages {
+    overflow: auto;
+    height: 72vh;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#chat-form {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+#room-form {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
