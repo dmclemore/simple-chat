@@ -9,8 +9,8 @@ db.create_all()
 User.query.delete()
 
 # Default User values
-user1 = User.signup(username="Admin", password="password")
-user2 = User.signup(username="Moderator", password="password")
+user1 = User.signup(username="admin", password="password")
+user2 = User.signup(username="mod", password="password")
 
 # General Chat
 room1 = Room.create(id="general")
