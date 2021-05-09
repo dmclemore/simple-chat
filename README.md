@@ -21,6 +21,14 @@ Python, Flask, Postgres, SQLAlchemy, Javascript, SocketIO, BCrypt, WTForms, HTML
    1. `flask run`
 5. Open your browser and go to "http://127.0.0.1:5000/"
 
+## To test locally:
+
+1. Follow run locally through step 2.
+2. Create test database
+   1. `createdb simple-chat_test`
+3. Run tests
+   1. `python -m unittest`
+
 ## Notes
 
 - There are two test users you can use for demo purposes. Usernames: "admin" & "mod". Both passwords are "password".
